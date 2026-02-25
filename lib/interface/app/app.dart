@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:finora/interface/app/router/router_app.dart';
+
 /// Root application widget.
 /// Widget raíz de la aplicación.
 class App extends StatelessWidget {
@@ -9,16 +11,9 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: Center(
-          child: const Text('Hello World'),
-        ),
-      ),
+    return MaterialApp.router(
+      title: 'Finora',
+      routerConfig: appRouter,
     );
   }
 }

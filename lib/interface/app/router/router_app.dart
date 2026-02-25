@@ -1,15 +1,34 @@
-/// This file manages global UI routes.
-/// Este archivo maneja las rutas globales de la UI.
-/// 
-/// This is a final file, not a barrel file. Place your global routing logic here.
-/// Este es un archivo final, no un archivo barrel. Coloque aquí su lógica de enrutamiento global.
-/// 
-/// If you want to grow the structure, change the file name to plural,
-/// and create at the same level a "container" folder if it will grow into
-/// multiple final files, or create named containers if they require more
-/// organization or will grow further.
-/// 
-/// Si desea hacer crecer la estructura, cambie el nombre del archivo a plural,
-/// y cree al mismo nivel una carpeta "container" si crecerá en varios archivos
-/// finales, o cree contenedores con nombre si requieren más organización
-/// o crecerán más.
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import 'package:finora/interface/app/router/auth/auth_router.dart'
+    show authRouter, LoginRoute;
+import 'package:finora/interface/app/router/dashboard/dashboard_router.dart'
+    show dashboardRouter, HomeRoute;
+import 'package:finora/interface/app/router/pages/pages_router.dart'
+    show pagesRouter;
+import 'package:finora/interface/pages/pages.dart' show NotFoundPage;
+
+/// Root redirect: / and /auth send to login; /dashboard to home.
+/// Redirección raíz: / y /auth al login; /dashboard al home.
+String? _rootRedirect(BuildContext context, GoRouterState state) {
+  final String loc = state.uri.path;
+  if (loc == '/' || loc == '/auth' || loc == '/auth/') {
+    return const LoginRoute().location;
+  }
+  if (loc == '/dashboard' || loc == '/dashboard/') {
+    return const HomeRoute().location;
+  }
+  return null;
+}
+
+/// Centralized app router that composes auth and dashboard routers.
+/// Router de la aplicación que centraliza auth y dashboard.
+final GoRouter appRouter = GoRouter(
+  initialLocation: const LoginRoute().location,
+  redirect: _rootRedirect,
+  routes: <RouteBase>[...authRouter, ...dashboardRouter, ...pagesRouter],
+  debugLogDiagnostics: true,
+  errorBuilder: (BuildContext context, GoRouterState state) =>
+      const NotFoundPage(),
+);

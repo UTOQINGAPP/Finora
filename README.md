@@ -1,17 +1,119 @@
-# finora
+# 💰 Finora
 
-A new Flutter project.
+Finora es una aplicación desarrollada en **Flutter** para la gestión inteligente de finanzas personales.  
+El proyecto está diseñado con arquitectura modular y preparado para escalar hacia un backend en el futuro sin reestructuraciones mayores.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Características
 
-A few resources to get you started if this is your first Flutter project:
+### 💳 Gestión de Cuentas
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Crear múltiples cuentas (Efectivo, Banco, Billetera digital)
+- Editar cuentas
+- Eliminar cuentas
+- Visualizar balance por cuenta
+- Balance total consolidado
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 💸 Registro de Movimientos
+
+- Registrar ingresos
+- Registrar gastos
+- Transferencias entre cuentas
+- Fecha personalizada
+- Notas opcionales
+
+### 🗂 Organización Financiera
+
+- Categorías personalizadas
+- Tipos de movimiento (Ingreso / Gasto / Transferencia)
+- Etiquetas opcionales
+- Historial completo de transacciones
+
+### 📊 Visualización y Control
+
+- Balance actual en tiempo real
+- Resumen mensual
+- Totales por categoría
+- Filtros por fecha
+- Filtros por tipo
+- Ordenamiento por fecha o monto
+
+### 🎨 Experiencia de Usuario
+
+- Diseño moderno y minimalista
+- Modo claro y oscuro
+- Interfaz limpia y enfocada en claridad financiera
+- Estados vacíos informativos
+- Feedback visual inmediato en cada operación
+
+---
+
+## 🏗 Arquitectura
+
+El proyecto sigue una arquitectura modular inspirada en el enfoque **CMI (Capas, Módulos y Contenedores)**.
+
+La aplicación actualmente funciona de forma local, pero está preparada para:
+
+- Integración con backend REST
+- Sincronización multi-dispositivo
+- Autenticación por usuario
+- Migración progresiva a almacenamiento remoto
+
+Sin necesidad de modificar la capa de presentación.
+
+---
+
+## 🛠 Tecnologías Utilizadas
+
+- Flutter
+- Riverpod (gestión de estado)
+- Drift (base de datos local prototipo)
+- GoRouter (navegación estructurada)
+- Intl (internacionalización)
+
+---
+
+## 📱 Capturas
+
+> Agrega aquí screenshots en modo claro y oscuro mostrando:
+>
+> - Dashboard principal
+> - Registro de movimiento
+> - Gestión de cuentas
+> - Resumen mensual
+
+---
+
+## 🔮 Escalabilidad Futura
+
+Finora está diseñada para evolucionar hacia:
+
+- Presupuestos mensuales
+- Metas de ahorro
+- Gráficos financieros avanzados
+- Exportación de datos (CSV / PDF)
+- Sincronización en la nube
+- Análisis inteligente de hábitos financieros
+
+---
+
+## 📦 Instalación
+
+1. Clona el repositorio
+2. Ejecuta `flutter pub get`
+3. Ejecuta `flutter run`
+
+---
+
+## 📌 Estado del Proyecto
+
+En desarrollo activo.  
+MVP en construcción.
+
+---
+
+## 👨‍💻 Autor
+
+Diego Moreano Merino  
+Flutter Developer | Arquitectura Modular | Enfoque en escalabilidad y diseño estructural

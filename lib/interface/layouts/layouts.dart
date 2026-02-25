@@ -2,4 +2,5 @@ library;
 
 /// Barrel file for layouts.
 /// Archivo barrel para los layouts.
-export 'example/example_layout.dart';
+export 'auth/auth_layout.dart';
+export 'dashboard/dashboard_layout.dart';
